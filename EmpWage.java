@@ -1,21 +1,22 @@
 class EmpWage {
         public static void main(String[] args) 
   {
-      int min =0;
-      int max =1; 
-      int isPresent = 0;
-      int isAbsent  = 1;
-
+     
 System.out.println("Welcome to Employee Wage Computation program");
 
-   int empCheck = (int)(Math.random() * (max - min + 1) + min);
+    int IS_FULL_TIME = 1;
+    int EMP_RATE_PER_HOUR = 20;
 
-      if(empCheck == 0)
-   {
-       System.out.println("Employee is present");
+     int empHrs = 0;
+     int empWage = 0;
+  
+     int  empCheck  = (int) Math.floor(Math.random() * 10) % 2;
+     if (empCheck == IS_FULL_TIME)
+            empHrs = 8;
 
- }
-  else
-     System.out.println("Employee is absent");
+      else
+            empHrs = 4;
+     empWage = empHrs * EMP_RATE_PER_HOUR;
+    System.out.prinltn ("Employee Wage: "+ empWage);
    }
 }   
